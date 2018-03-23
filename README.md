@@ -28,8 +28,10 @@
 
 ## Setup
 
-`cd eip_validator`
-`bundle`
+```
+cd eip_validator
+bundle
+```
 
 ## Usage
 
