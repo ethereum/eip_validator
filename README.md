@@ -36,13 +36,13 @@ bundle
 ## Usage
 
 ```ruby
-ruby bin/eip_loader.rb "FILE_NAME_WITH_WILDCARD"
+ruby bin/eip_validator.rb "FILE_NAME_WITH_WILDCARD"
 ```
 
 ### Example
 
 ```
-$  ruby bin/eip_loader.rb  "/Users/makoto/src/EIPs/EIPS/*[0-9].md"
+$  ruby bin/eip_validator.rb  "/Users/makoto/src/EIPs/EIPS/*[0-9].md"
 
 /Users/makoto/src/EIPs/EIPS/eip-779.md is NOT valid:	 {:category=>["can't be blank"]}
 /Users/makoto/src/EIPs/EIPS/eip-190.md raises error:	 unknown attribute 'Authors' for Validator.
