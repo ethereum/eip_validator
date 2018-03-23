@@ -16,15 +16,14 @@ Dir[dir].map do |file_name|
   begin 
     v = Validator.new(attributes)
     if v.valid?
-      num_valid+=1
-      
-      statuses.push v.status
-      types.push v.type
-      categories.push v.category
+      num_valid+=1      
     else
       num_invalid+=1
       puts "#{file_name} is NOT valid:\t #{v.errors.messages}"
     end
+    statuses.push v.status
+    types.push v.type
+    categories.push v.category
   rescue => e
     puts "#{file_name} raises error:\t #{e}"
     num_error+=1

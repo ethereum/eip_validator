@@ -59,7 +59,7 @@ $  ruby bin/eip_validator.rb  "/Users/makoto/src/EIPs/EIPS/*[0-9].md"
 /Users/makoto/src/EIPs/EIPS/eip-4.md raises error:	 unknown attribute 'layer' for Validator.
 
 total:50, valid:37, invalid:6, errors:7
-	statuses: [["Draft", 14], ["Final", 21], ["Accepted", 2]]
-	types: [["Standards Track", 37]]
-	categories: [["Core", 21], ["ERC", 10], ["Interface", 4], ["Networking", 2]]
+	statuses: [["Final", 25], ["Draft", 14], ["Accepted", 2], ["Active", 2]]
+	types: [["Meta", 5], ["Standards Track", 38]]
+	categories: [[nil, 5], ["Core", 22], ["ERC", 10], ["Interface", 4], ["Networking", 2]]
 ```
