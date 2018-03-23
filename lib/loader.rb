@@ -1,7 +1,11 @@
+require 'yaml'
 require 'front_matter_parser'
 
+
 class Loader
+  UNSAFE_LOADER = ->(string) { YAML.load(string) }
+
   def self.load(file_name)
-    FrontMatterParser::Parser.parse_file(file_name).front_matter
+    FrontMatterParser::Parser.parse_file(file_name, loader: UNSAFE_LOADER).front_matter
   end
 end
