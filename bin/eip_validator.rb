@@ -17,6 +17,7 @@ Dir[dir].map do |file_name|
     v = Validator.new(attributes)
     if v.valid?
       num_valid+=1
+      
       statuses.push v.status
       types.push v.type
       categories.push v.category
@@ -30,7 +31,11 @@ Dir[dir].map do |file_name|
   end
 end
 
+def aggregate(array)
+  array.group_by{|k,v| k}.map{|k,v| [k,v.length]}
+end
+
 puts "\n\ntotal:#{total}, valid:#{num_valid}, invalid:#{num_invalid}, errors:#{num_error}"
-puts "\tstatuses: #{statuses.uniq}"
-puts "\ttypes: #{types.uniq}"
-puts "\tcategories: #{categories.uniq}"
+puts "\tstatuses: #{aggregate(statuses)}"
+puts "\ttypes: #{aggregate(types)}"
+puts "\tcategories: #{aggregate(categories)}"
