@@ -16,6 +16,7 @@
 
 - replaces
 - requires
+- layer
 
 ### Mandatory values
 
@@ -48,18 +49,19 @@ $  ruby bin/eip_validator.rb  "/Users/makoto/src/EIPs/EIPS/*[0-9].md"
 /Users/makoto/src/EIPs/EIPS/eip-190.md raises error:	 unknown attribute 'Authors' for Validator.
 /Users/makoto/src/EIPs/EIPS/eip-608.md is NOT valid:	 {:category=>["can't be blank"]}
 /Users/makoto/src/EIPs/EIPS/eip-649.md raises error:	 unknown attribute 'Authors' for Validator.
-/Users/makoto/src/EIPs/EIPS/eip-6.md raises error:	 unknown attribute 'layer' for Validator.
 /Users/makoto/src/EIPs/EIPS/eip-607.md is NOT valid:	 {:category=>["can't be blank"]}
 /Users/makoto/src/EIPs/EIPS/eip-606.md is NOT valid:	 {:category=>["can't be blank"]}
 /Users/makoto/src/EIPs/EIPS/eip-158.md raises error:	 unknown attribute 'superseded-by' for Validator.
-/Users/makoto/src/EIPs/EIPS/eip-8.md raises error:	 unknown attribute 'layer' for Validator.
+/Users/makoto/src/EIPs/EIPS/eip-8.md is NOT valid:	 {:category=>["can't be blank"]}
 /Users/makoto/src/EIPs/EIPS/eip-615.md raises error:	 unknown attribute 'edited' for Validator.
 /Users/makoto/src/EIPs/EIPS/eip-1.md is NOT valid:	 {:category=>["can't be blank"], :status=>["is not included in the list"]}
 /Users/makoto/src/EIPs/EIPS/eip-101.md is NOT valid:	 {:status=>["is not included in the list"]}
-/Users/makoto/src/EIPs/EIPS/eip-4.md raises error:	 unknown attribute 'layer' for Validator.
+/Users/makoto/src/EIPs/EIPS/eip-4.md is NOT valid:	 {:category=>["can't be blank"]}
 
-total:50, valid:37, invalid:6, errors:7
-	statuses: [["Final", 25], ["Draft", 14], ["Accepted", 2], ["Active", 2]]
-	types: [["Meta", 5], ["Standards Track", 38]]
-	categories: [[nil, 5], ["Core", 22], ["ERC", 10], ["Interface", 4], ["Networking", 2]]
+
+total:50, valid:38, invalid:8, errors:4
+	statuses: [["Final", 27], ["Draft", 15], ["Accepted", 2], ["Active", 2]]
+	types: [["Meta", 5], ["Standards Track", 40], ["Process", 1]]
+	categories: [[nil, 7], ["Core", 22], ["ERC", 10], ["Interface", 5], ["Networking", 2]]
+	layers: [[nil, 43], ["Applications", 1], ["Networking", 1], ["Process", 1]]
 ```

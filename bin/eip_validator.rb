@@ -10,6 +10,7 @@ puts "\n"
 statuses = []
 types = []
 categories = []
+layers = []
 Dir[dir].map do |file_name|
   attributes = Loader.load(file_name)
   total+=1
@@ -24,6 +25,7 @@ Dir[dir].map do |file_name|
     statuses.push v.status
     types.push v.type
     categories.push v.category
+    layers.push v.layer
   rescue => e
     puts "#{file_name} raises error:\t #{e}"
     num_error+=1
@@ -38,3 +40,4 @@ puts "\n\ntotal:#{total}, valid:#{num_valid}, invalid:#{num_invalid}, errors:#{n
 puts "\tstatuses: #{aggregate(statuses)}"
 puts "\ttypes: #{aggregate(types)}"
 puts "\tcategories: #{aggregate(categories)}"
+puts "\tlayers: #{aggregate(layers)}"
