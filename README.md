@@ -65,3 +65,9 @@ total:50, valid:38, invalid:8, errors:4
 	categories: [[nil, 7], ["Core", 22], ["ERC", 10], ["Interface", 5], ["Networking", 2]]
 	layers: [[nil, 43], ["Applications", 1], ["Networking", 1], ["Process", 1]]
 ```
+
+## Running tests
+
+```
+bundle exec rspec
+```
