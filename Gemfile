@@ -4,6 +4,6 @@ gem 'front_matter_parser'
 gem 'activemodel'
 group :test do
  gem 'rspec'
- gem 'pry'
 end
+gem 'pry'
 

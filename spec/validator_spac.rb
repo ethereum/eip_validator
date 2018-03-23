@@ -33,7 +33,7 @@ RSpec.describe "Validator"  do
     let(:status) { 'Foo'}
     it "raise error if required fields are missing" do
       expect(validator.valid?).to eq false
-      expect(validator.errors[:status]).to eq false
+      expect(validator.errors[:status].first).to eq 'is not included in the list'
     end
   end
 end
