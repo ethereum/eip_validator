@@ -19,7 +19,7 @@
 
 ### Mandatory values
 
-- `status` must be `Draft`, `Accepted`, `Final`,`Deferred`
+- `status` must be `Draft`, `Accepted`, `Final`, or `Deferred`
 
 ## Prerequisite
 
