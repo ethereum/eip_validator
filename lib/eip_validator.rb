@@ -41,6 +41,7 @@ module EipValidator
         puts "\ttypes: #{aggregate(types)}"
         puts "\tcategories: #{aggregate(categories)}"
         puts "\tlayers: #{aggregate(layers)}"
+        raise "#{num_invalid} invalid entities" unless num_invalid == 0
       end
 
       private
