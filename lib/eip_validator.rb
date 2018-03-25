@@ -1,6 +1,6 @@
-require "./lib/eip_validator/version"
-require './lib/eip_validator/loader'
-require './lib/eip_validator/validator'
+require "eip_validator/version"
+require 'eip_validator/loader'
+require 'eip_validator/validator'
 
 module EipValidator
   class Runner
