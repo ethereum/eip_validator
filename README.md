@@ -25,13 +25,11 @@
 ## Prerequisite
 
 - ruby
-- bundler (`gem install bundler`)
 
-## Usage
+## Setup
 
 ```
-gem eip_validator
-bundle
+gem install eip_validator
 ```
 
 ## Usage
