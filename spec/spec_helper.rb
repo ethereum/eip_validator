@@ -1,4 +1,3 @@
-require "bundler/setup"
 require "eip_validator"
 
 RSpec.configure do |config|
