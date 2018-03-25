@@ -5,13 +5,13 @@ RSpec.describe EipValidator do
 
   it "raises exception if it includes invalid eips" do
     expect{
-      EipValidator::Runner.run "spec/fixtures/VALID*md"
+      EipValidator::Runner.run Dir["spec/fixtures/VALID*md"]
     }.not_to raise_error
   end
 
   it "raises exception if it includes invalid eips" do
     expect{
-      EipValidator::Runner.run "spec/fixtures/*md"
+      EipValidator::Runner.run Dir["spec/fixtures/*md"]
     }.to raise_error
   end
 end

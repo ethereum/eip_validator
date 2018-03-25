@@ -5,7 +5,7 @@ require 'eip_validator/validator'
 module EipValidator
   class Runner
     class << self  
-      def run(dir)
+      def run(file_names)
         num_valid = 0
         num_invalid = 0
         num_error = 0
@@ -15,7 +15,7 @@ module EipValidator
         types = []
         categories = []
         layers = []
-        Dir[dir].map do |file_name|
+        file_names.map do |file_name|
           attributes = Loader.load(file_name)
           total+=1
           begin 
