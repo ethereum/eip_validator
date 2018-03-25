@@ -32,10 +32,17 @@
 gem install eip_validator
 ```
 
-## Usage
+## Usage (command line)
 
 ```ruby
 eip_validator "FILE_NAME_WITH_WILDCARD"
+```
+
+## Usage (as a lib)
+
+```ruby
+require 'eip_validator
+EipValidator::Runner.run "*.md"
 ```
 
 ### Example
