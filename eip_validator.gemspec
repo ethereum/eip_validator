@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["@makoto_inoue"]
 
   spec.summary       = "Small library to check if EIP doc has valid front matter"
-  spec.homepage      = "https://makoto.github.io/me"
+  spec.homepage      = "https://github.com/makoto/eip_validator"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
