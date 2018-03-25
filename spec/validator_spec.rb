@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe "Validator"  do
+RSpec.describe "EipValidator::Validator"  do
   let(:category) { 'Core' }
   let(:type) { 'Standards Track' }
   let(:status) { 'Final' }
@@ -15,7 +15,7 @@ RSpec.describe "Validator"  do
       created: '2017-02-13'
     }
   }
-  subject(:validator){ Validator.new(eip)}
+  subject(:validator){ EipValidator::Validator.new(eip)}
 
   describe "valid" do
     it "should have required fields" do
@@ -25,7 +25,7 @@ RSpec.describe "Validator"  do
 
   describe "missing fields" do
     it "raise error if required fields are missing" do
-      expect(Validator.new().valid?).to eq false
+      expect(EipValidator::Validator.new().valid?).to eq false
     end
   end
 

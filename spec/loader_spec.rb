@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe "Loader"  do
+RSpec.describe "EipValidator::Loader"  do
   let(:category) { 'Core' }
   let(:type) { 'Standards Track' }
   let(:status) { 'Final' }
@@ -16,7 +16,7 @@ RSpec.describe "Loader"  do
     }
   }
   let(:file_name) {
-   'spec/fixtures/EIP.md'
+   'spec/fixtures/VALID_EIP.md'
   }
 
   subject(:loader){ Loader.load(file_name)}

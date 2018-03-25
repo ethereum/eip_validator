@@ -1,0 +1,9 @@
+---
+eip: 0
+title: Bitwise shifting instructions in EVM
+author: Alex Beregszaszi, Paweł Bylica
+type: Standards Track
+category: Core
+status: INVALID
+created: 2017-02-13
+---
