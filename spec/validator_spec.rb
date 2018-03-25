@@ -36,4 +36,22 @@ RSpec.describe "Validator"  do
       expect(validator.errors[:status].first).to eq 'is not included in the list'
     end
   end
+
+  describe "type is Standards Track" do
+    let(:category) { nil }
+    let(:type) { 'Standards Track' }
+      
+    it "category is mandatory" do
+      expect(validator.valid?).to eq false
+    end
+  end
+
+  describe "type is not Standards Track" do
+    let(:category) { nil }
+    let(:type) { 'Process' }
+  
+    it "category is not mandatory" do
+      expect(validator.valid?).to eq true
+    end
+  end
 end
