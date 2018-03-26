@@ -16,6 +16,10 @@ module EipValidator
         categories = []
         layers = []
         file_names.map do |file_name|
+          unless file_name.match(/.*eip-\d+.md$/)
+            puts "Warning: #{file_name} does not match eip file format"
+            next
+          end
           attributes = Loader.load(file_name)
           total+=1
           begin 
