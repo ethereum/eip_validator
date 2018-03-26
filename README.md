@@ -35,20 +35,21 @@ gem install eip_validator
 ## Usage (command line)
 
 ```ruby
-eip_validator "FILE_NAME_WITH_WILDCARD"
+eip_validator INPUT_FILES
 ```
 
 ## Usage (as a lib)
 
 ```ruby
 require 'eip_validator
-EipValidator::Runner.run "*.md"
+
+EipValidator::Runner.run 
 ```
 
 ### Example
 
 ```
-$eip_validator  "/Users/makoto/src/EIPs/EIPS/*[0-9].md"
+$eip_validator  ~/src/EIPs/EIPS/*[0-9].md
 
 Warning: /Users/makoto/src/EIPs/EIPS/eip-158.md 	 unknown attribute 'superseded-by' for EipValidator::Validator.
 Warning: /Users/makoto/src/EIPs/EIPS/eip-615.md 	 unknown attribute 'edited' for EipValidator::Validator.
@@ -66,4 +67,11 @@ total:51, valid:49, invalid:0, errors:2
 
 ```
 bundle exec rspec
+```
+
+## Releasing new gem
+
+```
+gem bump --version patch|minor|major
+bundle exec rake release
 ```
