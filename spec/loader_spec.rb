@@ -16,7 +16,7 @@ RSpec.describe "EipValidator::Loader"  do
     }
   }
   let(:file_name) {
-   'spec/fixtures/VALID_EIP.md'
+   'spec/fixtures/valid/eip-145.md'
   }
 
   subject(:loader){ Loader.load(file_name)}
