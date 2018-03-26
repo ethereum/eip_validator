@@ -30,7 +30,7 @@ module EipValidator
             types.push v.type
             categories.push v.category
             layers.push v.layer
-          rescue ActiveModel::UnknownAttributeError => e
+          rescue => e
             puts "Warning: #{file_name} \t #{e}"
             num_error+=1
           end
