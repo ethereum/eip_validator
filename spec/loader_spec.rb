@@ -19,7 +19,7 @@ RSpec.describe "EipValidator::Loader"  do
    'spec/fixtures/valid/eip-145.md'
   }
 
-  subject(:loader){ Loader.load(file_name)}
+  subject(:loader){ EipValidator::Loader.load(file_name)}
 
   describe "valid" do
     it "should have required fields" do
