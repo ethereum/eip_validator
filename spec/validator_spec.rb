@@ -1,9 +1,10 @@
 require 'spec_helper'
 
 RSpec.describe "EipValidator::Validator"  do
+  let(:status) { 'Final' }
   let(:category) { 'Core' }
   let(:type) { 'Standards Track' }
-  let(:status) { 'Final' }
+
   let(:eip){
     {
       eip: 145,
@@ -38,20 +39,31 @@ RSpec.describe "EipValidator::Validator"  do
   end
 
   describe "type is Standards Track" do
-    let(:category) { nil }
     let(:type) { 'Standards Track' }
-      
-    it "category is mandatory" do
-      expect(validator.valid?).to eq false
+
+    [nil, 'Something else'].each do |value|
+      describe "category '#{value}' is not valid" do
+        let(:category) { value }
+        it{ expect(validator.valid?).to eq false } 
+      end
+    end
+
+    %w(Core Networking Interface ).each do |value|
+      describe "category value '#{value}'' is valid" do
+        let(:category) { value }
+        it{ expect(validator.valid?).to eq true }
+      end  
     end
   end
 
   describe "type is not Standards Track" do
-    let(:category) { nil }
     let(:type) { 'Process' }
   
-    it "category is not mandatory" do
-      expect(validator.valid?).to eq true
+    [nil, 'Something else'].each do |value|
+      describe "category '#{value}' is valid" do
+        let(:category) { value }
+        it{ expect(validator.valid?).to eq true } 
+      end
     end
   end
 end
