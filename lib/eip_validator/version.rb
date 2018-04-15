@@ -1,3 +1,3 @@
 module EipValidator
-  VERSION = "0.5.1.minotr1"
+  VERSION = "0.5.0"
 end
