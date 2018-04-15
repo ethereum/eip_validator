@@ -9,7 +9,7 @@ module EipValidator
     validates_inclusion_of :category,
                            in: %w(Core Networking Interface ERC),
                            if: Proc.new { |v| v.type == 'Standards Track' }
-
+    validates_inclusion_of :type, in: ['Standards Track', 'Informational', 'Meta']
     validates_inclusion_of :status, in: %w(Draft Active Accepted Final Deferred)
   end
 end

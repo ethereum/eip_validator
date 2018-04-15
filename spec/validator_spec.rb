@@ -38,6 +38,22 @@ RSpec.describe "EipValidator::Validator"  do
     end
   end
 
+  describe "type" do
+    ['Standard Track'].each do |value|
+      describe "category '#{value}' is not valid" do | value |
+        let(:type) { value }
+        it{ expect(validator.valid?).to eq false }
+      end
+    end
+
+    ['Standards Track', 'Informational', 'Meta'].each do | value |
+      describe "type value '#{value}'' is valid" do
+        let(:type) { value }
+        it{ expect(validator.valid?).to eq true }
+      end
+    end
+  end
+
   describe "type is Standards Track" do
     let(:type) { 'Standards Track' }
 
@@ -57,7 +73,7 @@ RSpec.describe "EipValidator::Validator"  do
   end
 
   describe "type is not Standards Track" do
-    let(:type) { 'Process' }
+    let(:type) { 'Meta' }
   
     [nil, 'Something else'].each do |value|
       describe "category '#{value}' is valid" do
