@@ -54,6 +54,26 @@ RSpec.describe "EipValidator::Validator"  do
     end
   end
 
+  describe "attribute with -" do
+    it "is valid if specified" do
+      EipValidator::Validator.new(eip.merge({'discussions-to':'something'}))
+    end
+ 
+    it "not valid if not specified" do
+      expect{
+        EipValidator::Validator.new(eip.merge({'how-to':'something'}))
+      }.to raise_error(/unknown attribute/)
+    end
+  end
+
+  describe "attribute with _" do
+    it "not valid" do
+      expect{
+        EipValidator::Validator.new(eip.merge({'discussions_to':'something'}))
+      }.to raise_error("discussions_to incude _ which is not allowed")
+    end
+  end
+
   describe "type is Standards Track" do
     let(:type) { 'Standards Track' }
 
