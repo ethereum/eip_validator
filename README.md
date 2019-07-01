@@ -14,9 +14,14 @@
 
 ### Optional fields
 
+- discussions-to
+- layer
 - replaces
 - requires
-- layer
+- resolution
+- review-period-end
+- superseded-by
+- updated
 
 ### Mandatory values
 
