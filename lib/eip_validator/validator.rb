@@ -16,10 +16,10 @@ module EipValidator
     end
 
     include ActiveModel::Model
-    attr_accessor :eip, :title, :author, :type, :category, :status, :created
-    attr_accessor :replaces, :requires, :layer
+    attr_accessor :eip, :title, :author, :type, :category, :status, :created, :updated
+    attr_accessor :replaces, :requires, :layer, :resolution
     # replace - with _
-    attr_accessor :discussions_to
+    attr_accessor :discussions_to, :superseded_by, :review_period_end
     validates_presence_of :eip, :title, :author, :type, :status, :created
     validates_inclusion_of :category,
                            in: %w(Core Networking Interface ERC),
