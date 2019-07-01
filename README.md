@@ -25,7 +25,7 @@
 
 ### Mandatory values
 
-- `status` must be 'Draft', 'Last Call', 'Accepted', 'Final', 'Active', 'Abandoned', 'Deferred', 'Rejected', or 'Superseded'
+- `status` must be 'Draft', 'Last Call', 'Accepted', 'Final', 'Active', 'Abandoned', 'Rejected', or 'Superseded'
 
 ## Prerequisite
 
