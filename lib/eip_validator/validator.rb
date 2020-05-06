@@ -25,7 +25,7 @@ module EipValidator
                            in: %w(Core Networking Interface ERC),
                            if: Proc.new { |v| v.type == 'Standards Track' }
     validates_inclusion_of :type, in: ['Standards Track', 'Informational', 'Meta']
-    validates_inclusion_of :status, in: ['Draft', 'Last Call', 'Accepted', 'Final', 'Active', 'Abandoned', 'Deferred', 'Rejected', 'Superseded']
+    validates_inclusion_of :status, in: ['Draft', 'Last Call', 'Accepted', 'Final', 'Active', 'Abandoned', 'Deferred', 'Rejected', 'Superseded', 'Withdrawn']
   end
 end
 
